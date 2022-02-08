@@ -1,0 +1,9 @@
+workers = 8
+threads = 32
+bind = "0.0.0.0:80"
+max_requests = 1000
+daemon = False
+timeout = 55
+accesslog = "/var/log/gunicorn.log"
+access_log_format = '%({X-Forwarded-For}i)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
+errorlog = "/var/log/gunicorn_error.log"
